@@ -1,8 +1,8 @@
 
-import { DemoHeroGeometric } from "@/components/demo";
+import Home from "./Home";
 
 const Index = () => {
-  return <DemoHeroGeometric />;
+  return <Home />;
 };
 
 export default Index;
