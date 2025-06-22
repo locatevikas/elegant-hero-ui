@@ -21,12 +21,12 @@ function Navigation() {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-[#030303]/80 backdrop-blur-lg border-b border-white/[0.08]"
+      transition={{ duration: 0.6 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-[#030303]/80 backdrop-blur-xl border-b border-white/[0.05]"
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-white font-bold text-xl tracking-tight">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
+          <Link to="/" className="text-white font-bold text-2xl tracking-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-rose-300">
               Vikas
             </span>
@@ -38,10 +38,10 @@ function Navigation() {
                 key={item.name}
                 to={item.path}
                 className={cn(
-                  "text-sm tracking-wide transition-colors duration-200",
+                  "text-sm font-medium tracking-wide transition-colors duration-300 hover:text-white",
                   location.pathname === item.path
                     ? "text-white"
-                    : "text-white/60 hover:text-white"
+                    : "text-white/60"
                 )}
               >
                 {item.name}
@@ -55,9 +55,9 @@ function Navigation() {
           >
             <Link
               to="/contact"
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-rose-500/20 border border-white/[0.15] rounded-full text-white text-sm font-medium hover:from-indigo-500/30 hover:to-rose-500/30 transition-all duration-200"
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all duration-300"
             >
-              Book Strategy Call
+              Book Call
             </Link>
           </motion.div>
         </div>
