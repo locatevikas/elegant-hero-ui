@@ -151,7 +151,7 @@ const CaseStudies = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 p-4 md:p-6 text-center">
+                <Card className="bg-[#0a0a0a]/50 backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 p-4 md:p-6 text-center">
                   <CardContent className="p-0">
                     <stat.icon className="w-6 md:w-8 h-6 md:h-8 text-indigo-400 mx-auto mb-3 md:mb-4" />
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.value}</h3>
@@ -176,7 +176,7 @@ const CaseStudies = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className={`bg-gradient-to-br ${study.gradient} backdrop-blur-xl border ${study.borderColor} hover:border-white/30 transition-all duration-300`}>
+                <Card className={`bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.15] hover:border-white/30 transition-all duration-300`}>
                   <CardHeader className="pb-0">
                     <div className="flex flex-wrap gap-3 md:gap-4 mb-6 text-sm">
                       <div className="px-3 py-1 bg-white/[0.1] rounded-full">
@@ -188,7 +188,7 @@ const CaseStudies = () => {
                     </div>
                     <CardTitle className="text-white text-xl md:text-2xl lg:text-3xl mb-4 leading-tight">{study.title}</CardTitle>
                     <div className="text-white/60 mb-6 text-sm md:text-base">
-                      <strong>Client:</strong> {study.client}
+                      <strong className="text-white/80">Client:</strong> {study.client}
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-6 md:space-y-8">
@@ -207,7 +207,7 @@ const CaseStudies = () => {
                       <h4 className="text-white font-semibold mb-4 md:mb-6 text-sm md:text-base">Results</h4>
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {study.results.map((result, idx) => (
-                          <div key={idx} className="text-center p-4 md:p-6 bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/[0.05]">
+                          <div key={idx} className="text-center p-4 md:p-6 bg-[#0a0a0a]/50 backdrop-blur-sm rounded-2xl border border-white/[0.05]">
                             <div className={`text-lg md:text-2xl font-bold mb-2 ${result.color}`}>
                               {result.growth || result.reduction || result.count}
                             </div>
@@ -222,7 +222,7 @@ const CaseStudies = () => {
                       </div>
                     </div>
                     
-                    <Card className="bg-white/[0.02] border border-white/[0.05] p-4 md:p-6">
+                    <Card className="bg-[#0a0a0a]/30 border border-white/[0.05] p-4 md:p-6">
                       <CardContent className="p-0">
                         <blockquote className="text-white/90 text-sm md:text-lg italic leading-relaxed">
                           "{study.testimonial}"
@@ -259,14 +259,14 @@ const CaseStudies = () => {
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8 md:mb-12">
-              <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] p-6 text-left">
+              <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.1] p-6 text-left">
                 <CardContent className="p-0">
                   <Target className="w-6 md:w-8 h-6 md:h-8 text-indigo-400 mb-4" />
                   <h3 className="text-white font-semibold mb-2 text-sm md:text-base">Strategic Clarity First</h3>
                   <p className="text-white/70 text-xs md:text-sm">Deep analysis and positioning before any execution</p>
                 </CardContent>
               </Card>
-              <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] p-6 text-left">
+              <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.1] p-6 text-left">
                 <CardContent className="p-0">
                   <TrendingUp className="w-6 md:w-8 h-6 md:h-8 text-rose-400 mb-4" />
                   <h3 className="text-white font-semibold mb-2 text-sm md:text-base">Systematic Execution</h3>

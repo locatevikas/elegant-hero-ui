@@ -129,7 +129,7 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 p-4 md:p-6 text-center h-full">
+                <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 p-4 md:p-6 text-center h-full">
                   <CardContent className="p-0">
                     <method.icon className="w-6 md:w-8 h-6 md:h-8 text-indigo-400 mx-auto mb-4" />
                     <h3 className="text-white font-semibold text-base md:text-lg mb-2">{method.title}</h3>
@@ -157,7 +157,7 @@ const Contact = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-indigo-500/5 to-rose-500/5 backdrop-blur-xl border border-white/[0.15]">
+                <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.15]">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl md:text-3xl mb-4">Book Your Free Strategy Call</CardTitle>
                     <p className="text-white/70 text-sm md:text-base">Let's discuss your growth challenges and explore how strategic excellence can transform your business.</p>
@@ -208,10 +208,10 @@ const Contact = () => {
                           name="revenue"
                           value={formData.revenue}
                           onChange={handleChange}
-                          className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/[0.05] border border-white/[0.15] rounded-xl text-white h-10 md:h-12 text-sm md:text-base"
+                          className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/[0.05] border border-white/[0.15] rounded-xl text-white/90 h-10 md:h-12 text-sm md:text-base [&>option]:bg-gray-800 [&>option]:text-white"
                           required
                         >
-                          <option value="">Select revenue range</option>
+                          <option value="" className="text-white/60">Select revenue range</option>
                           <option value="under-10l">Under ₹10L</option>
                           <option value="10l-50l">₹10L - ₹50L</option>
                           <option value="50l-1cr">₹50L - ₹1Cr</option>
@@ -226,10 +226,10 @@ const Contact = () => {
                           name="challenge"
                           value={formData.challenge}
                           onChange={handleChange}
-                          className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/[0.05] border border-white/[0.15] rounded-xl text-white h-10 md:h-12 text-sm md:text-base"
+                          className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/[0.05] border border-white/[0.15] rounded-xl text-white/90 h-10 md:h-12 text-sm md:text-base [&>option]:bg-gray-800 [&>option]:text-white"
                           required
                         >
-                          <option value="">Select primary challenge</option>
+                          <option value="" className="text-white/60">Select primary challenge</option>
                           <option value="lead-generation">Lead Generation</option>
                           <option value="conversion-optimization">Conversion Optimization</option>
                           <option value="scaling-growth">Scaling Growth</option>
@@ -269,7 +269,7 @@ const Contact = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-green-500/5 to-emerald-500/5 backdrop-blur-xl border border-white/[0.15]">
+                <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.15]">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-3 text-base md:text-lg">
                       <Clock className="w-4 md:w-5 h-4 md:h-5 text-green-400" />
@@ -299,7 +299,7 @@ const Contact = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-500/5 to-pink-500/5 backdrop-blur-xl border border-white/[0.15]">
+                <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.15]">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-3 text-base md:text-lg">
                       <Shield className="w-4 md:w-5 h-4 md:h-5 text-purple-400" />
@@ -320,7 +320,7 @@ const Contact = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-orange-500/5 to-red-500/5 backdrop-blur-xl border border-white/[0.15]">
+                <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.15]">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-3 text-base md:text-lg">
                       <Star className="w-4 md:w-5 h-4 md:h-5 text-orange-400" />
@@ -366,7 +366,7 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300">
+                <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300">
                   <CardContent className="p-6 md:p-8">
                     <h3 className="text-white font-semibold text-base md:text-lg mb-3">{faq.question}</h3>
                     <p className="text-white/70 leading-relaxed text-sm md:text-base">{faq.answer}</p>

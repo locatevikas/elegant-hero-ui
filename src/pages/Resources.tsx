@@ -142,7 +142,7 @@ const Resources = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <Card className={`h-full bg-gradient-to-br ${resource.gradient} backdrop-blur-xl border ${resource.borderColor} hover:border-white/30 transition-all duration-300 group-hover:scale-[1.02]`}>
+                <Card className="h-full bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.15] hover:border-white/30 transition-all duration-300 group-hover:scale-[1.02]">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 md:w-12 h-10 md:h-12 bg-white/[0.1] backdrop-blur-sm border border-white/[0.15] rounded-2xl flex items-center justify-center">
@@ -200,7 +200,7 @@ const Resources = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] p-6 md:p-8 h-full">
+                <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.1] p-6 md:p-8 h-full">
                   <CardContent className="p-0">
                     <blockquote className="text-white/90 text-base md:text-lg italic mb-6 leading-relaxed">
                       "{testimonial.quote}"
@@ -227,7 +227,7 @@ const Resources = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <Card className="bg-gradient-to-br from-indigo-500/10 to-rose-500/10 backdrop-blur-xl border border-white/[0.15] p-8 md:p-12">
+            <Card className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.15] p-8 md:p-12">
               <CardContent className="p-0">
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                   Get All Resources + Weekly Insights
