@@ -25,7 +25,7 @@ export function MobileNavigation() {
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(!isOpen)}
-        className="text-white/80 hover:text-white hover:bg-white/10"
+        className="text-foreground/80 hover:text-foreground hover:bg-white/10 dark:hover:bg-white/10"
       >
         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </Button>
@@ -37,7 +37,7 @@ export function MobileNavigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 bg-[#030303]/95 backdrop-blur-xl border-b border-white/[0.05] z-50"
+            className="absolute top-full left-0 right-0 bg-background/95 dark:bg-[#030303]/95 backdrop-blur-xl border-b border-white/[0.05] dark:border-white/[0.05] z-50"
           >
             <div className="container mx-auto px-6 py-4">
               <div className="flex flex-col space-y-4">
@@ -47,10 +47,10 @@ export function MobileNavigation() {
                     to={item.path}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "text-sm font-medium tracking-wide transition-colors duration-300 hover:text-white py-2",
+                      "text-sm font-medium tracking-wide transition-colors duration-300 hover:text-foreground py-2",
                       location.pathname === item.path
-                        ? "text-white"
-                        : "text-white/60"
+                        ? "text-foreground"
+                        : "text-foreground/60"
                     )}
                   >
                     {item.name}
@@ -59,7 +59,7 @@ export function MobileNavigation() {
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all duration-300 text-center mt-4"
+                  className="px-6 py-3 bg-white/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/20 rounded-full text-foreground text-sm font-medium hover:bg-white/20 dark:hover:bg-white/20 transition-all duration-300 text-center mt-4"
                 >
                   Book Call
                 </Link>

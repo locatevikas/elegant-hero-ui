@@ -21,11 +21,11 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': [
-					'-apple-system',
-					'BlinkMacSystemFont',
 					'SF Pro Display',
 					'SF Pro Text',
-					'Open Sans',
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'Source Sans 3',
 					'system-ui',
 					'sans-serif'
 				],
