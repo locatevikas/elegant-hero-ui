@@ -1,10 +1,11 @@
+
 import { Navigation } from "@/components/navigation";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/footer";
-import { CheckCircle, Target } from "lucide-react";
+import { CheckCircle, Target, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Services = () => {
