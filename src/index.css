@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,14 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Open Sans', system-ui, sans-serif;
+  }
+  
+  /* Fallback for when SF Pro is not available */
+  @supports not (font-family: 'SF Pro Display') {
+    body {
+      font-family: 'Open Sans', system-ui, sans-serif;
+      letter-spacing: -0.03em;
+    }
   }
 }

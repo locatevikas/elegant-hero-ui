@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,20 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sans': [
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'SF Pro Display',
+					'SF Pro Text',
+					'Open Sans',
+					'system-ui',
+					'sans-serif'
+				],
+			},
+			letterSpacing: {
+				'tight-custom': '-0.03em',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
