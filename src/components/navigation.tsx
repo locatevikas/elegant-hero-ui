@@ -4,6 +4,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
+import { MobileNavigation } from "./mobile-navigation";
 
 function Navigation() {
   const location = useLocation();
@@ -49,17 +50,22 @@ function Navigation() {
             ))}
           </div>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              to="/contact"
-              className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all duration-300"
+          <div className="flex items-center gap-4">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden md:block"
             >
-              Book Call
-            </Link>
-          </motion.div>
+              <Link
+                to="/contact"
+                className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all duration-300"
+              >
+                Book Call
+              </Link>
+            </motion.div>
+            
+            <MobileNavigation />
+          </div>
         </div>
       </div>
     </motion.nav>

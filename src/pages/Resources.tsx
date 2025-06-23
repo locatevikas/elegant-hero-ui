@@ -102,26 +102,26 @@ const Resources = () => {
               <Download className="w-4 h-4 text-indigo-400" />
               <span className="text-white/80 text-sm font-medium">Free Resources</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               Growth Resources for{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
                 Ambitious Leaders
               </span>
             </h1>
-            <p className="text-xl text-white/60 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/60 mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               Free frameworks, tools, and strategies to accelerate your growth journey with proven methodologies.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
               {categories.map((category, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                  className="px-4 py-2 bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] rounded-full"
+                  className="px-3 md:px-4 py-2 bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] rounded-full"
                 >
-                  <span className="text-white/80 text-sm font-medium">{category.name} ({category.count})</span>
+                  <span className="text-white/80 text-xs md:text-sm font-medium">{category.name} ({category.count})</span>
                 </motion.div>
               ))}
             </div>
@@ -130,9 +130,9 @@ const Resources = () => {
       </section>
 
       {/* Resources Grid */}
-      <section className="py-32 bg-[#050505]">
+      <section className="py-20 md:py-32 bg-[#050505]">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {resources.map((resource, index) => (
               <motion.div
                 key={index}
@@ -145,27 +145,27 @@ const Resources = () => {
                 <Card className={`h-full bg-gradient-to-br ${resource.gradient} backdrop-blur-xl border ${resource.borderColor} hover:border-white/30 transition-all duration-300 group-hover:scale-[1.02]`}>
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-white/[0.1] backdrop-blur-sm border border-white/[0.15] rounded-2xl flex items-center justify-center">
-                        <resource.icon className="w-6 h-6 text-white" />
+                      <div className="w-10 md:w-12 h-10 md:h-12 bg-white/[0.1] backdrop-blur-sm border border-white/[0.15] rounded-2xl flex items-center justify-center">
+                        <resource.icon className="w-5 md:w-6 h-5 md:h-6 text-white" />
                       </div>
-                      <div className="text-sm text-indigo-400 font-medium">{resource.type}</div>
+                      <div className="text-xs md:text-sm text-indigo-400 font-medium">{resource.type}</div>
                     </div>
-                    <CardTitle className="text-white text-xl leading-tight">{resource.title}</CardTitle>
+                    <CardTitle className="text-white text-lg md:text-xl leading-tight">{resource.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white/70 mb-6 leading-relaxed">{resource.description}</p>
+                    <p className="text-white/70 mb-6 leading-relaxed text-sm md:text-base">{resource.description}</p>
                     
                     <div className="space-y-2 mb-6">
                       {resource.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-white/60 text-sm">{feature}</span>
+                          <CheckCircle className="w-3 md:w-4 h-3 md:h-4 text-green-400 flex-shrink-0" />
+                          <span className="text-white/60 text-xs md:text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
-                    <Button className="w-full bg-white/[0.05] backdrop-blur-xl border border-white/[0.15] text-white hover:bg-white/[0.1] transition-all duration-300 rounded-2xl">
-                      <Download className="w-4 h-4 mr-2" />
+                    <Button className="w-full bg-white/[0.05] backdrop-blur-xl border border-white/[0.15] text-white hover:bg-white/[0.1] transition-all duration-300 rounded-2xl text-sm md:text-base">
+                      <Download className="w-3 md:w-4 h-3 md:h-4 mr-2" />
                       Download Free
                     </Button>
                   </CardContent>
@@ -177,21 +177,21 @@ const Resources = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 bg-[#030303]">
+      <section className="py-20 md:py-32 bg-[#030303]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16 md:mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
               What Leaders Say
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -200,14 +200,14 @@ const Resources = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] p-8 h-full">
+                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] p-6 md:p-8 h-full">
                   <CardContent className="p-0">
-                    <blockquote className="text-white/90 text-lg italic mb-6 leading-relaxed">
+                    <blockquote className="text-white/90 text-base md:text-lg italic mb-6 leading-relaxed">
                       "{testimonial.quote}"
                     </blockquote>
                     <div>
-                      <div className="font-semibold text-white">{testimonial.author}</div>
-                      <div className="text-white/60 text-sm">{testimonial.company}</div>
+                      <div className="font-semibold text-white text-sm md:text-base">{testimonial.author}</div>
+                      <div className="text-white/60 text-xs md:text-sm">{testimonial.company}</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -218,7 +218,7 @@ const Resources = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-32 bg-[#050505]">
+      <section className="py-20 md:py-32 bg-[#050505]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -227,26 +227,26 @@ const Resources = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <Card className="bg-gradient-to-br from-indigo-500/10 to-rose-500/10 backdrop-blur-xl border border-white/[0.15] p-12">
+            <Card className="bg-gradient-to-br from-indigo-500/10 to-rose-500/10 backdrop-blur-xl border border-white/[0.15] p-8 md:p-12">
               <CardContent className="p-0">
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                   Get All Resources + Weekly Insights
                 </h3>
-                <p className="text-xl text-white/60 mb-8 leading-relaxed">
+                <p className="text-lg md:text-xl text-white/60 mb-6 md:mb-8 leading-relaxed">
                   Subscribe to receive all growth resources, plus exclusive case studies and strategic insights delivered weekly.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-600 hover:to-rose-600 text-white border-0 px-8 py-4 text-lg rounded-full">
+                  <Button size="lg" className="bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-600 hover:to-rose-600 text-white border-0 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
                     Subscribe for Free Access
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white/[0.15] bg-transparent text-white/90 hover:bg-white/[0.05] backdrop-blur-xl px-8 py-4 text-lg rounded-full">
+                  <Button asChild size="lg" variant="outline" className="border-white/[0.15] bg-transparent text-white/90 hover:bg-white/[0.05] backdrop-blur-xl px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
                     <a href="/contact" className="flex items-center gap-2">
                       Get Premium Support
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </Button>
                 </div>
-                <p className="text-white/40 text-sm mt-6">No spam. Unsubscribe anytime. 5,000+ growth leaders trust us.</p>
+                <p className="text-white/40 text-xs md:text-sm mt-6">No spam. Unsubscribe anytime. 5,000+ growth leaders trust us.</p>
               </CardContent>
             </Card>
           </motion.div>

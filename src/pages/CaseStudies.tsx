@@ -112,26 +112,26 @@ const CaseStudies = () => {
               <Star className="w-4 h-4 text-indigo-400" />
               <span className="text-white/80 text-sm font-medium">Proven Results</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               Real Growth Stories,{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
                 Real Results
               </span>
             </h1>
-            <p className="text-xl text-white/60 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/60 mb-12 leading-relaxed max-w-3xl mx-auto">
               Discover how strategic excellence has transformed companies across industries, delivering measurable growth and lasting impact.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
               {industries.map((industry, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                  className="px-4 py-2 bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] rounded-full"
+                  className="px-3 md:px-4 py-2 bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] rounded-full"
                 >
-                  <span className="text-white/80 text-sm font-medium">{industry.name} ({industry.projects})</span>
+                  <span className="text-white/80 text-xs md:text-sm font-medium">{industry.name} ({industry.projects})</span>
                 </motion.div>
               ))}
             </div>
@@ -140,9 +140,9 @@ const CaseStudies = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#050505]">
+      <section className="py-16 md:py-20 bg-[#050505]">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -151,11 +151,11 @@ const CaseStudies = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 p-6 text-center">
+                <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 p-4 md:p-6 text-center">
                   <CardContent className="p-0">
-                    <stat.icon className="w-8 h-8 text-indigo-400 mx-auto mb-4" />
-                    <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</h3>
-                    <p className="text-white/60 text-sm">{stat.label}</p>
+                    <stat.icon className="w-6 md:w-8 h-6 md:h-8 text-indigo-400 mx-auto mb-3 md:mb-4" />
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.value}</h3>
+                    <p className="text-white/60 text-xs md:text-sm">{stat.label}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -165,9 +165,9 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-32 bg-[#030303]">
+      <section className="py-20 md:py-32 bg-[#030303]">
         <div className="container mx-auto px-6">
-          <div className="space-y-24 max-w-6xl mx-auto">
+          <div className="space-y-16 md:space-y-24 max-w-6xl mx-auto">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={index}
@@ -178,40 +178,40 @@ const CaseStudies = () => {
               >
                 <Card className={`bg-gradient-to-br ${study.gradient} backdrop-blur-xl border ${study.borderColor} hover:border-white/30 transition-all duration-300`}>
                   <CardHeader className="pb-0">
-                    <div className="flex flex-wrap gap-4 mb-6 text-sm">
+                    <div className="flex flex-wrap gap-3 md:gap-4 mb-6 text-sm">
                       <div className="px-3 py-1 bg-white/[0.1] rounded-full">
-                        <span className="text-white/80">{study.industry}</span>
+                        <span className="text-white/80 text-xs md:text-sm">{study.industry}</span>
                       </div>
                       <div className="px-3 py-1 bg-white/[0.1] rounded-full">
-                        <span className="text-white/80">{study.timeframe}</span>
+                        <span className="text-white/80 text-xs md:text-sm">{study.timeframe}</span>
                       </div>
                     </div>
-                    <CardTitle className="text-white text-3xl mb-4">{study.title}</CardTitle>
-                    <div className="text-white/60 mb-6">
+                    <CardTitle className="text-white text-xl md:text-2xl lg:text-3xl mb-4 leading-tight">{study.title}</CardTitle>
+                    <div className="text-white/60 mb-6 text-sm md:text-base">
                       <strong>Client:</strong> {study.client}
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-8">
-                    <div className="grid md:grid-cols-2 gap-8">
+                  <CardContent className="space-y-6 md:space-y-8">
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                       <div>
-                        <h4 className="text-white font-semibold mb-3">Challenge</h4>
-                        <p className="text-white/70 leading-relaxed">{study.challenge}</p>
+                        <h4 className="text-white font-semibold mb-3 text-sm md:text-base">Challenge</h4>
+                        <p className="text-white/70 leading-relaxed text-sm md:text-base">{study.challenge}</p>
                       </div>
                       <div>
-                        <h4 className="text-white font-semibold mb-3">Solution</h4>
-                        <p className="text-white/70 leading-relaxed">{study.solution}</p>
+                        <h4 className="text-white font-semibold mb-3 text-sm md:text-base">Solution</h4>
+                        <p className="text-white/70 leading-relaxed text-sm md:text-base">{study.solution}</p>
                       </div>
                     </div>
                     
                     <div>
-                      <h4 className="text-white font-semibold mb-6">Results</h4>
-                      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                      <h4 className="text-white font-semibold mb-4 md:mb-6 text-sm md:text-base">Results</h4>
+                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {study.results.map((result, idx) => (
-                          <div key={idx} className="text-center p-6 bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/[0.05]">
-                            <div className={`text-2xl font-bold mb-2 ${result.color}`}>
+                          <div key={idx} className="text-center p-4 md:p-6 bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/[0.05]">
+                            <div className={`text-lg md:text-2xl font-bold mb-2 ${result.color}`}>
                               {result.growth || result.reduction || result.count}
                             </div>
-                            <div className="text-white/60 text-sm font-medium">{result.metric}</div>
+                            <div className="text-white/60 text-xs md:text-sm font-medium">{result.metric}</div>
                             {result.before && result.after && (
                               <div className="text-xs text-white/40 mt-2">
                                 {result.before} → {result.after}
@@ -222,9 +222,9 @@ const CaseStudies = () => {
                       </div>
                     </div>
                     
-                    <Card className="bg-white/[0.02] border border-white/[0.05] p-6">
+                    <Card className="bg-white/[0.02] border border-white/[0.05] p-4 md:p-6">
                       <CardContent className="p-0">
-                        <blockquote className="text-white/90 text-lg italic leading-relaxed">
+                        <blockquote className="text-white/90 text-sm md:text-lg italic leading-relaxed">
                           "{study.testimonial}"
                         </blockquote>
                       </CardContent>
@@ -238,7 +238,7 @@ const CaseStudies = () => {
       </section>
 
       {/* Methodology Preview */}
-      <section className="py-32 bg-[#050505]">
+      <section className="py-20 md:py-32 bg-[#050505]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -247,38 +247,38 @@ const CaseStudies = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
               The{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
                 Strategic Method
               </span>
               {" "}Behind Results
             </h2>
-            <p className="text-xl text-white/60 mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/60 mb-8 md:mb-12 leading-relaxed">
               Every success story follows our proven 4-phase growth transformation methodology
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-8 md:mb-12">
               <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] p-6 text-left">
                 <CardContent className="p-0">
-                  <Target className="w-8 h-8 text-indigo-400 mb-4" />
-                  <h3 className="text-white font-semibold mb-2">Strategic Clarity First</h3>
-                  <p className="text-white/70 text-sm">Deep analysis and positioning before any execution</p>
+                  <Target className="w-6 md:w-8 h-6 md:h-8 text-indigo-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 text-sm md:text-base">Strategic Clarity First</h3>
+                  <p className="text-white/70 text-xs md:text-sm">Deep analysis and positioning before any execution</p>
                 </CardContent>
               </Card>
               <Card className="bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] p-6 text-left">
                 <CardContent className="p-0">
-                  <TrendingUp className="w-8 h-8 text-rose-400 mb-4" />
-                  <h3 className="text-white font-semibold mb-2">Systematic Execution</h3>
-                  <p className="text-white/70 text-sm">AI-powered automation with human strategic oversight</p>
+                  <TrendingUp className="w-6 md:w-8 h-6 md:h-8 text-rose-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 text-sm md:text-base">Systematic Execution</h3>
+                  <p className="text-white/70 text-xs md:text-sm">AI-powered automation with human strategic oversight</p>
                 </CardContent>
               </Card>
             </div>
             
-            <Button asChild size="lg" className="bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-600 hover:to-rose-600 text-white border-0 px-12 py-6 text-lg font-medium rounded-full">
+            <Button asChild size="lg" className="bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-600 hover:to-rose-600 text-white border-0 px-8 md:px-12 py-4 md:py-6 text-base md:text-lg font-medium rounded-full">
               <Link to="/contact" className="flex items-center gap-3">
                 Start Your Success Story
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
               </Link>
             </Button>
           </motion.div>
