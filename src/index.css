@@ -95,8 +95,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Source Sans 3', system-ui, sans-serif;
-    letter-spacing: -0.03em;
+    font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   }
   
   /* Light mode specific styles */
