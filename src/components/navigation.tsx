@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
 import { MobileNavigation } from "./mobile-navigation";
 import { ThemeToggle } from "./theme-toggle";
-import { Button as MovingButton } from "@/components/ui/moving-border";
 
 function Navigation() {
   const location = useLocation();
@@ -25,13 +24,13 @@ function Navigation() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#030303]/80 dark:bg-[#030303]/80 backdrop-blur-xl border-b border-white/[0.05] dark:border-white/[0.05]"
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-4">
             <Link to="/" className="text-foreground font-bold text-2xl tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-rose-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-rose-300 dark:from-indigo-300 dark:to-rose-300">
                 Vikas
               </span>
             </Link>
@@ -61,15 +60,12 @@ function Navigation() {
               whileTap={{ scale: 0.95 }}
               className="hidden md:block"
             >
-              <MovingButton
-                borderRadius="1.75rem"
-                className="bg-background dark:bg-slate-900 text-foreground dark:text-white border-border dark:border-slate-800 px-8 py-3 text-sm font-medium"
-                containerClassName="h-auto w-auto"
-                as={Link}
+              <Link
                 to="/contact"
+                className="px-6 py-3 bg-white/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/20 rounded-full text-foreground text-sm font-medium hover:bg-white/20 dark:hover:bg-white/20 transition-all duration-300"
               >
                 Book Call
-              </MovingButton>
+              </Link>
             </motion.div>
             
             <MobileNavigation />
