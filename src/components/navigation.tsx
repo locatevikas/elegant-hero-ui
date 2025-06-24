@@ -24,13 +24,13 @@ function Navigation() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-[#030303]/80 dark:bg-[#030303]/80 backdrop-blur-xl border-b border-white/[0.05] dark:border-white/[0.05]"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border"
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-4">
             <Link to="/" className="text-foreground font-bold text-2xl tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-rose-300 dark:from-indigo-300 dark:to-rose-300">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-rose-500">
                 Vikas
               </span>
             </Link>
@@ -60,12 +60,14 @@ function Navigation() {
               whileTap={{ scale: 0.95 }}
               className="hidden md:block"
             >
-              <Link
-                to="/contact"
-                className="px-6 py-3 bg-white/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/20 rounded-full text-foreground text-sm font-medium hover:bg-white/20 dark:hover:bg-white/20 transition-all duration-300"
-              >
-                Book Call
-              </Link>
+              <div className="gradient-border">
+                <Link
+                  to="/contact"
+                  className="gradient-border-inner block bg-background text-foreground text-sm font-medium hover:bg-foreground hover:text-background transition-all duration-300"
+                >
+                  Book Call
+                </Link>
+              </div>
             </motion.div>
             
             <MobileNavigation />

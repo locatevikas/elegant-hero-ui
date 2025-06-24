@@ -8,7 +8,7 @@ import { ArrowRight, Calendar, Shield } from "lucide-react";
 
 function FinalCTA() {
   return (
-    <section className="py-32 bg-gradient-to-b from-[#050505] to-[#030303] relative">
+    <section className="py-32 bg-gradient-to-b from-background to-background/50 relative">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,14 +22,14 @@ function FinalCTA() {
             <span className="text-rose-300 text-sm font-medium">Limited Availability</span>
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-8">
             Ready to Scale with{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
               Strategic Excellence?
             </span>
           </h2>
           
-          <p className="text-xl text-white/60 mb-4 leading-relaxed">
+          <p className="text-xl text-foreground/60 mb-4 leading-relaxed">
             Limited slots available for Q1 2025. Premium growth strategies for companies committed to 10X results.
           </p>
           
@@ -39,22 +39,21 @@ function FinalCTA() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button 
-              asChild 
-              size="lg" 
-              className="group bg-white/[0.08] backdrop-blur-xl border border-white/[0.15] text-white hover:bg-white/[0.15] transition-all duration-300 px-12 py-6 text-lg font-medium rounded-full"
-            >
-              <Link to="/contact" className="flex items-center gap-3">
+            <div className="gradient-border">
+              <Link 
+                to="/contact" 
+                className="gradient-border-inner group bg-background text-foreground hover:bg-foreground hover:text-background transition-all duration-300 px-12 py-6 text-lg font-medium rounded-full flex items-center gap-3"
+              >
                 Book Free Strategy Call
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-            </Button>
+            </div>
             
             <Button 
               asChild 
               variant="outline" 
               size="lg" 
-              className="group border-white/[0.15] bg-transparent text-white/90 hover:bg-white/[0.05] backdrop-blur-xl px-12 py-6 text-lg font-medium rounded-full"
+              className="group border-border bg-transparent text-foreground/90 hover:bg-foreground/5 backdrop-blur-xl px-12 py-6 text-lg font-medium rounded-full"
             >
               <Link to="/resources" className="flex items-center gap-3">
                 Download Growth Framework
