@@ -25,13 +25,9 @@ export default {
 					'SF Pro Text',
 					'-apple-system',
 					'BlinkMacSystemFont',
-					'Source Sans 3',
 					'system-ui',
 					'sans-serif'
 				],
-			},
-			letterSpacing: {
-				'tight-custom': '-0.03em',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
