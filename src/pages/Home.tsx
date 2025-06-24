@@ -11,7 +11,7 @@ import { Footer } from "@/components/footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#030303]">
+    <div className="min-h-screen bg-background">
       <Navigation />
       <HomeHero />
       <SocialProof />

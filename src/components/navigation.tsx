@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
 import { MobileNavigation } from "./mobile-navigation";
 import { ThemeToggle } from "./theme-toggle";
+import { Button as MovingButton } from "@/components/ui/moving-border";
 
 function Navigation() {
   const location = useLocation();
@@ -60,14 +61,15 @@ function Navigation() {
               whileTap={{ scale: 0.95 }}
               className="hidden md:block"
             >
-              <div className="gradient-border">
-                <Link
-                  to="/contact"
-                  className="gradient-border-inner block bg-background text-foreground text-sm font-medium hover:bg-foreground hover:text-background transition-all duration-300"
-                >
-                  Book Call
-                </Link>
-              </div>
+              <MovingButton
+                borderRadius="1.75rem"
+                className="bg-background dark:bg-slate-900 text-foreground dark:text-white border-border dark:border-slate-800 px-8 py-3 text-sm font-medium"
+                containerClassName="h-auto w-auto"
+                as={Link}
+                to="/contact"
+              >
+                Book Call
+              </MovingButton>
             </motion.div>
             
             <MobileNavigation />

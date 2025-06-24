@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Shield } from "lucide-react";
+import { Button as MovingButton } from "@/components/ui/moving-border";
 
 function FinalCTA() {
   return (
@@ -39,15 +40,16 @@ function FinalCTA() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <div className="gradient-border">
-              <Link 
-                to="/contact" 
-                className="gradient-border-inner group bg-background text-foreground hover:bg-foreground hover:text-background transition-all duration-300 px-12 py-6 text-lg font-medium rounded-full flex items-center gap-3"
-              >
-                Book Free Strategy Call
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            <MovingButton
+              borderRadius="1.75rem"
+              className="bg-background dark:bg-slate-900 text-foreground dark:text-white border-border dark:border-slate-800 px-12 py-6 text-lg font-medium flex items-center gap-3"
+              containerClassName="h-auto w-auto"
+              as={Link}
+              to="/contact"
+            >
+              Book Free Strategy Call
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </MovingButton>
             
             <Button 
               asChild 
